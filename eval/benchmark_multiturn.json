@@ -1,0 +1,154 @@
+[
+  {
+    "id": "follow-01",
+    "category": "follow_up",
+    "setup": [
+      "What is the proper procedure for receiving and inspecting morning inventory deliveries?"
+    ],
+    "query": "what about for fish?",
+    "expected_record_id": "rec-014",
+    "notes": "The original reported failure. Scores 0.7382 standalone and is refused by the floor."
+  },
+  {
+    "id": "follow-02",
+    "category": "follow_up",
+    "setup": [
+      "How do I close the kitchen at night?"
+    ],
+    "query": "what goes on the label?",
+    "expected_record_id": "rec-008",
+    "notes": "Ellipsis with no subject. 'Label' alone has no anchor in any stored question."
+  },
+  {
+    "id": "follow-03",
+    "category": "follow_up",
+    "setup": [
+      "What is the recipe and preparation guide for Kenyan Beef Wet Fry?"
+    ],
+    "query": "how long do I boil it?",
+    "expected_record_id": "rec-012",
+    "notes": "Pronoun reference. 'It' must resolve to the beef from the previous turn."
+  },
+  {
+    "id": "follow-04",
+    "category": "follow_up",
+    "setup": [
+      "What are the specific dietary restrictions and preferences for regular customer Mr. Smith?"
+    ],
+    "query": "can I use the sunflower oil for him?",
+    "expected_record_id": "rec-006",
+    "notes": "Safety-adjacent. Must reach rec-006, not the recipe record that also names sunflower oil."
+  },
+  {
+    "id": "follow-05",
+    "category": "follow_up",
+    "setup": [
+      "How do I balance the till at the end of my shift?"
+    ],
+    "query": "what if it doesn't match?",
+    "expected_record_id": "rec-011",
+    "notes": "Tests the variance rule added to rec-011. 'It' refers to the reconciliation."
+  },
+  {
+    "id": "follow-06",
+    "category": "follow_up",
+    "setup": [
+      "What steps must be followed when a customer informs staff of a severe food allergy?"
+    ],
+    "query": "who do I tell if he's not around?",
+    "expected_record_id": "rec-007",
+    "notes": "Tests the general-manager fallback. Safety critical: a wrong answer here has real consequences."
+  },
+  {
+    "id": "follow-07",
+    "category": "follow_up",
+    "setup": [
+      "How should staff perform the daily equipment inspection during morning setup?"
+    ],
+    "query": "and what if one of them is out of range?",
+    "expected_record_id": "rec-004",
+    "notes": "Plural pronoun referring to the temperature displays in the previous answer."
+  },
+  {
+    "id": "follow-08",
+    "category": "follow_up",
+    "setup": [
+      "How should staff handle a spill on the dining floor during busy operational hours?"
+    ],
+    "query": "what should I clean it with?",
+    "expected_record_id": "rec-013",
+    "notes": "Checks the sanitizer spec is reachable from rec-013 alone, not only from rec-008."
+  },
+  {
+    "id": "follow-09",
+    "category": "follow_up",
+    "setup": [
+      "What is the recipe and preparation guide for Kenyan Beef Wet Fry?",
+      "how long do I boil it?"
+    ],
+    "query": "and what is the maize to beans ratio for githeri?",
+    "expected_record_id": "rec-015",
+    "notes": "Topic switch. The follow-up is already standalone and must NOT be contaminated by the beef context. Guards against a condenser that always merges."
+  },
+  {
+    "id": "follow-10",
+    "category": "follow_up",
+    "setup": [
+      "What is the standard opening routine and checklist before serving customers?",
+      "what time do we open?"
+    ],
+    "query": "so what time should I get here?",
+    "expected_record_id": "rec-003",
+    "notes": "Three turns deep. Tests that history beyond the immediately preceding turn still resolves."
+  },
+  {
+    "id": "negfollow-01",
+    "category": "out_of_scope_follow_up",
+    "setup": [
+      "How do I close the kitchen at night?"
+    ],
+    "query": "and what's the wifi password?",
+    "expected_record_id": null,
+    "notes": "Plain out-of-scope question wearing a follow-up's clothes. Must still refuse."
+  },
+  {
+    "id": "negfollow-02",
+    "category": "out_of_scope_follow_up",
+    "setup": [
+      "How do I balance the till at the end of my shift?"
+    ],
+    "query": "how much should we pay a new waiter?",
+    "expected_record_id": null,
+    "notes": "Semantically adjacent to rec-011 (money, staff, admin). High leak risk once history is in scope."
+  },
+  {
+    "id": "negfollow-03",
+    "category": "out_of_scope_follow_up",
+    "setup": [
+      "What is the recipe and preparation guide for Kenyan Beef Wet Fry?"
+    ],
+    "query": "what about chicken biryani?",
+    "expected_record_id": null,
+    "notes": "Highest leak risk in the set. Condenses to a well-formed recipe question that retrieves rec-012 at a plausible score. The floor and the prompt must both hold."
+  },
+  {
+    "id": "negfollow-04",
+    "category": "out_of_scope_follow_up",
+    "setup": [
+      "What are the key daily food safety and hygiene guidelines staff must follow during shifts?"
+    ],
+    "query": "can I swap my Saturday shift with someone?",
+    "expected_record_id": null,
+    "notes": "Shares the word 'shift' with the setup turn. Tests that lexical overlap does not pull it in-domain."
+  },
+  {
+    "id": "negfollow-05",
+    "category": "out_of_scope_follow_up",
+    "setup": [
+      "What steps must be followed when a customer informs staff of a severe food allergy?"
+    ],
+    "query": "what should I do if someone has an asthma attack?",
+    "expected_record_id": null,
+    "notes": "Medical emergency adjacent to the allergy record. Inventing a procedure here would be the worst possible failure, so refusal must be unambiguous."
+  }
+]

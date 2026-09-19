@@ -1,0 +1,758 @@
+{
+  "summary": {
+    "embedding_strategy": "question_only",
+    "embedding_model": "gemini-embedding-001",
+    "llm_model": "gemini-3.5-flash-lite",
+    "floor_mode": "relative",
+    "min_relevance": 0.75,
+    "relative_margin": 0.1,
+    "top_k": 3,
+    "counts": {
+      "in_domain": 24,
+      "out_of_scope": 6
+    },
+    "hit_rate_at_3": 1.0,
+    "survived_floor_rate": 1.0,
+    "refusal_rate": 1.0,
+    "hit_rate_target_met": true,
+    "refusal_target_met": true,
+    "misses": [],
+    "dropped_by_floor": [],
+    "leaked": [],
+    "latency_ms": {
+      "mean": 3298.3,
+      "median": 3102.3,
+      "max": 5558.8,
+      "over_3s": 18
+    },
+    "per_category": {
+      "direct": {
+        "passed": 12,
+        "total": 12,
+        "rate": 1.0
+      },
+      "paraphrased": {
+        "passed": 12,
+        "total": 12,
+        "rate": 1.0
+      },
+      "out_of_scope": {
+        "passed": 6,
+        "total": 6,
+        "rate": 1.0
+      }
+    }
+  },
+  "cases": [
+    {
+      "id": "direct-01",
+      "category": "direct",
+      "query": "What is the standard procedure for greeting guests as they enter the restaurant?",
+      "expected": "rec-000",
+      "retrieved": [
+        "rec-000",
+        "rec-003",
+        "rec-001"
+      ],
+      "kept": [
+        "rec-000"
+      ],
+      "scores": [
+        1.0,
+        0.8504,
+        0.8482
+      ],
+      "hit": true,
+      "refused": false,
+      "answer": "Here's how to greet guests as they enter the restaurant:\n\n1. Greet the guest warmly within 30 seconds of their arrival.\n2. Ask whether they have a reservation.\n3. Escort them promptly to a table that is clean and fully set.",
+      "latency_ms": 3453.2
+    },
+    {
+      "id": "direct-02",
+      "category": "direct",
+      "query": "How should a server handle taking food and beverage orders?",
+      "expected": "rec-001",
+      "retrieved": [
+        "rec-001",
+        "rec-000",
+        "rec-009"
+      ],
+      "kept": [
+        "rec-001"
+      ],
+      "scores": [
+        1.0,
+        0.8482,
+        0.8283
+      ],
+      "hit": true,
+      "refused": false,
+      "answer": "Here's how to handle taking food and beverage orders:\n1. Introduce yourself to the table.\n2. Highlight the daily specials.\n3. Write the order down as it is given, noting any dietary restrictions alongside the item they apply to.\n4. Repeat the complete order back to the guests and confirm it before leaving the table.",
+      "latency_ms": 3248.6
+    },
+    {
+      "id": "direct-03",
+      "category": "direct",
+      "query": "What is the standard opening routine and checklist before serving customers?",
+      "expected": "rec-003",
+      "retrieved": [
+        "rec-003",
+        "rec-004",
+        "rec-014"
+      ],
+      "kept": [
+        "rec-003"
+      ],
+      "scores": [
+        1.0,
+        0.8708,
+        0.8638
+      ],
+      "hit": true,
+      "refused": false,
+      "answer": "Here's how to do the standard opening routine:\n\n1. Unlock the doors.\n2. Turn on the main lighting.\n3. Wipe down all tables and chairs.\n4. Confirm every POS terminal is online.\n5. Confirm the mandatory equipment is working: microwave, refrigerator, and espresso machine.\n6. Confirm the essential daily ingredients are fully stocked: cooking oil, fresh dairy, and the signature house sauce base.",
+      "latency_ms": 3098.0
+    },
+    {
+      "id": "direct-04",
+      "category": "direct",
+      "query": "What is the mandatory procedure for setting up the handwashing station?",
+      "expected": "rec-005",
+      "retrieved": [
+        "rec-005",
+        "rec-004",
+        "rec-010"
+      ],
+      "kept": [
+        "rec-005"
+      ],
+      "scores": [
+        1.0,
+        0.8404,
+        0.8225
+      ],
+      "hit": true,
+      "refused": false,
+      "answer": "Here's how to set up the handwashing station:\n1. Complete this before service starts.\n2. Stock the station with anti-bacterial liquid soap, and check the soap level is high enough to last service.\n3. Stock clean disposable paper towels.\n4. Run the tap and confirm it works with a steady flow of water.\n5. Confirm a dedicated pedal-operated trash bin is in place at the station.",
+      "latency_ms": 2772.4
+    },
+    {
+      "id": "direct-05",
+      "category": "direct",
+      "query": "What steps must be followed when a customer informs staff of a severe food allergy?",
+      "expected": "rec-007",
+      "retrieved": [
+        "rec-007",
+        "rec-009",
+        "rec-010"
+      ],
+      "kept": [
+        "rec-007"
+      ],
+      "scores": [
+        1.0,
+        0.8406,
+        0.8364
+      ],
+      "hit": true,
+      "refused": false,
+      "answer": "Here are the steps to follow:\n\n1. Tell the kitchen manager immediately, before the order is started. If the kitchen manager is unreachable, contact the general manager.\n2. Clean and sanitize every food prep surface and utensil that will be used for the order, using a food-grade chlorine-based sanitizer diluted to 50-100 ppm.\n3. Read the ingredient label on every item going into the dish and check it against the allergy the customer stated.\n4. Mark the final ticket clearly with an 'ALLERGY WARNING' label.",
+      "latency_ms": 2962.6
+    },
+    {
+      "id": "direct-06",
+      "category": "direct",
+      "query": "What is the standard procedure for closing the kitchen at the end of the day?",
+      "expected": "rec-008",
+      "retrieved": [
+        "rec-008",
+        "rec-010",
+        "rec-003"
+      ],
+      "kept": [
+        "rec-008"
+      ],
+      "scores": [
+        1.0,
+        0.85,
+        0.8473
+      ],
+      "hit": true,
+      "refused": false,
+      "answer": "Here's how to close the kitchen:\n1. Turn off all heat sources, then close the gas cylinder valves.\n2. Transfer perishable items, such as raw fish and prepped stew bases, into airtight containers, label each container with the item name, date of prep, and expiry date, and store them in the chiller held at or below 4°C.\n3. Clean and sanitize all prep surfaces and cooktops using a food-grade chlorine-based sanitizer diluted to 50-100 ppm.\n4. Sweep the floors, then mop them.\n5. Empty every waste bin into the main dumpster.\n6. Have the kitchen manager review and sign off on the kitchen close.",
+      "latency_ms": 3691.6
+    },
+    {
+      "id": "direct-07",
+      "category": "direct",
+      "query": "How should staff handle cash and closing register balancing at the end of a shift?",
+      "expected": "rec-011",
+      "retrieved": [
+        "rec-011",
+        "rec-003",
+        "rec-008"
+      ],
+      "kept": [
+        "rec-011"
+      ],
+      "scores": [
+        1.0,
+        0.8492,
+        0.8446
+      ],
+      "hit": true,
+      "refused": false,
+      "answer": "Here's how to handle cash and closing register balancing at the end of a shift:\n\n1. Count the physical cash in the drawer and compare the total against the expected cash sales on the POS terminal's daily sales report.\n2. Reconcile the M-PESA paybill transaction log against the same POS daily sales report.\n3. If either check shows any variance at all, however small, notify the duty manager immediately.\n4. Secure the base float of KSh 5,000 in the safe.\n5. Submit the final shift report to the duty manager for sign-off.",
+      "latency_ms": 4384.5
+    },
+    {
+      "id": "direct-08",
+      "category": "direct",
+      "query": "What is the recipe and preparation guide for Kenyan Beef Wet Fry?",
+      "expected": "rec-012",
+      "retrieved": [
+        "rec-012",
+        "rec-015",
+        "rec-010"
+      ],
+      "kept": [
+        "rec-012"
+      ],
+      "scores": [
+        1.0,
+        0.8255,
+        0.7135
+      ],
+      "hit": true,
+      "refused": false,
+      "answer": "Here's how to prepare Kenyan Beef Wet Fry:\n\nYield: 4 portions. Ingredients: 500g cubed beef, 3 tbsp sunflower oil (the default cooking oil), 2 chopped onions, 3 minced garlic cloves, 3 diced tomatoes, 1 tbsp tomato paste, 1 tsp salt, and fresh dhania (cilantro).\n\n1. Boil the 500g of cubed beef for 40 to 45 minutes, until tender.\n2. In a separate pan, sauté the chopped onions and garlic in the sunflower oil until golden.\n3. Add the diced tomatoes, tomato paste, and salt, and cook until a thick gravy forms.\n4. Add the boiled beef to the pan and stir well until it is fully coated in the thick sauce.\n5. Simmer for 8 to 10 minutes.\n6. Garnish with fresh dhania and serve with ugali or rice.",
+      "latency_ms": 2690.3
+    },
+    {
+      "id": "direct-09",
+      "category": "direct",
+      "query": "What is the proper procedure for receiving and inspecting morning inventory deliveries?",
+      "expected": "rec-014",
+      "retrieved": [
+        "rec-014",
+        "rec-004",
+        "rec-003"
+      ],
+      "kept": [
+        "rec-014"
+      ],
+      "scores": [
+        1.0,
+        0.874,
+        0.8638
+      ],
+      "hit": true,
+      "refused": false,
+      "answer": "Here's how to do it:\n\n1. Count the delivered quantities, such as maize flour bags, fresh fish, meat cuts, and vegetables, against the delivery invoice.\n2. Inspect the fresh produce and meat for freshness, and check that the meat and fish arrived at 4°C or below. If an item fails inspection, note the rejection clearly on the invoice and do not accept the item.\n3. Check that all outer packaging is undamaged.\n4. Move the cold items into the refrigerator or freezer immediately.\n5. Log the delivery.",
+      "latency_ms": 2668.6
+    },
+    {
+      "id": "direct-10",
+      "category": "direct",
+      "query": "What is the standard ratio of maize to beans required for preparing Githeri?",
+      "expected": "rec-015",
+      "retrieved": [
+        "rec-015",
+        "rec-012",
+        "rec-010"
+      ],
+      "kept": [
+        "rec-015"
+      ],
+      "scores": [
+        1.0,
+        0.8255,
+        0.7306
+      ],
+      "hit": true,
+      "refused": false,
+      "answer": "The standard ratio for Githeri is 2 cups of maize to 3 cups of beans, keeping the beans slightly higher in quantity so the dish remains balanced and doesn't become too dry.",
+      "latency_ms": 4541.2
+    },
+    {
+      "id": "direct-11",
+      "category": "direct",
+      "query": "What are the best practices for presenting the bill and processing payment?",
+      "expected": "rec-002",
+      "retrieved": [
+        "rec-002",
+        "rec-001",
+        "rec-011"
+      ],
+      "kept": [
+        "rec-002"
+      ],
+      "scores": [
+        1.0,
+        0.8084,
+        0.784
+      ],
+      "hit": true,
+      "refused": false,
+      "answer": "Here are the best practices for presenting the bill and processing payment:\n1. Bring the bill in a clean folio as soon as the guest asks for it.\n2. Place the folio at the right edge of the table.\n3. Process the payment promptly.\n4. Thank the guests and invite them back.",
+      "latency_ms": 3763.8
+    },
+    {
+      "id": "direct-12",
+      "category": "direct",
+      "query": "How should staff handle a spill on the dining floor during busy operational hours?",
+      "expected": "rec-013",
+      "retrieved": [
+        "rec-013",
+        "rec-000",
+        "rec-010"
+      ],
+      "kept": [
+        "rec-013"
+      ],
+      "scores": [
+        1.0,
+        0.8332,
+        0.832
+      ],
+      "hit": true,
+      "refused": false,
+      "answer": "Here's how to handle a spill on the dining floor during busy operational hours:\n1. Place a yellow 'Caution: Wet Floor' sign over the spill immediately.\n2. Wipe up all of the liquid using a dry mop or absorbent towels.\n3. Sanitize the surface using a food-grade chlorine-based sanitizer diluted to 50-100 ppm.\n4. Leave the sign in place until the floor is entirely dry, then remove it.",
+      "latency_ms": 3396.3
+    },
+    {
+      "id": "para-01",
+      "category": "paraphrased",
+      "query": "How do I prep the beef wet fry?",
+      "expected": "rec-012",
+      "retrieved": [
+        "rec-012",
+        "rec-005",
+        "rec-008"
+      ],
+      "kept": [
+        "rec-012"
+      ],
+      "scores": [
+        0.885,
+        0.7528,
+        0.7478
+      ],
+      "hit": true,
+      "refused": false,
+      "answer": "Here's how to prep the beef wet fry:\n\n1. Boil the 500g of cubed beef for 40 to 45 minutes, until tender.\n2. In a separate pan, sauté the chopped onions and garlic in the sunflower oil until golden.\n3. Add the diced tomatoes, tomato paste, and salt, and cook until a thick gravy forms.\n4. Add the boiled beef to the pan and stir well until it is fully coated in the thick sauce.\n5. Simmer for 8 to 10 minutes.\n6. Garnish with fresh dhania and serve with ugali or rice.",
+      "latency_ms": 3075.2
+    },
+    {
+      "id": "para-02",
+      "category": "paraphrased",
+      "query": "what temperature should cold food be kept at?",
+      "expected": "rec-010",
+      "retrieved": [
+        "rec-010",
+        "rec-008",
+        "rec-009"
+      ],
+      "kept": [
+        "rec-010",
+        "rec-008",
+        "rec-009"
+      ],
+      "scores": [
+        0.8345,
+        0.8312,
+        0.8294
+      ],
+      "hit": true,
+      "refused": false,
+      "answer": "Keep cold food below 4°C.",
+      "latency_ms": 2680.8
+    },
+    {
+      "id": "para-03",
+      "category": "paraphrased",
+      "query": "A customer says they are allergic to peanuts. What do I do?",
+      "expected": "rec-007",
+      "retrieved": [
+        "rec-007",
+        "rec-006",
+        "rec-009"
+      ],
+      "kept": [
+        "rec-007",
+        "rec-006",
+        "rec-009"
+      ],
+      "scores": [
+        0.911,
+        0.8298,
+        0.828
+      ],
+      "hit": true,
+      "refused": false,
+      "answer": "Here are the steps to follow when a customer informs staff of a severe food allergy:\n\n1. Tell the kitchen manager immediately, before the order is started. If the kitchen manager is unreachable, contact the general manager.\n2. Clean and sanitize every food prep surface and utensil that will be used for the order, using a food-grade chlorine-based sanitizer diluted to 50-100 ppm.\n3. Read the ingredient label on every item going into the dish and check it against the allergy the customer stated.\n4. Mark the final ticket clearly with an 'ALLERGY WARNING' label.",
+      "latency_ms": 5211.4
+    },
+    {
+      "id": "para-04",
+      "category": "paraphrased",
+      "query": "What does Mr. Smith usually order?",
+      "expected": "rec-006",
+      "retrieved": [
+        "rec-006",
+        "rec-001",
+        "rec-003"
+      ],
+      "kept": [
+        "rec-006"
+      ],
+      "scores": [
+        0.9133,
+        0.8115,
+        0.7825
+      ],
+      "hit": true,
+      "refused": false,
+      "answer": "Mr. Smith usually orders a beef wet fry, as well as tea or coffee.",
+      "latency_ms": 2525.3
+    },
+    {
+      "id": "para-05",
+      "category": "paraphrased",
+      "query": "What time do we open and what do I need to do first?",
+      "expected": "rec-003",
+      "retrieved": [
+        "rec-003",
+        "rec-014",
+        "rec-004"
+      ],
+      "kept": [
+        "rec-003",
+        "rec-014",
+        "rec-004"
+      ],
+      "scores": [
+        0.9032,
+        0.8565,
+        0.8528
+      ],
+      "hit": true,
+      "refused": false,
+      "answer": "The restaurant opens at 7:00 AM, so staff arrive by 6:30 AM. Here's what you need to do first:\n\n1. Unlock the doors.\n2. Turn on the main lighting.\n3. Wipe down all tables and chairs.\n4. Confirm every POS terminal is online.\n5. Confirm the mandatory equipment is working: microwave, refrigerator, and espresso machine.\n6. Confirm the essential daily ingredients are fully stocked: cooking oil, fresh dairy, and the signature house sauce base.",
+      "latency_ms": 3938.0
+    },
+    {
+      "id": "para-06",
+      "category": "paraphrased",
+      "query": "Someone is unhappy their food came out cold. How should I handle it?",
+      "expected": "rec-009",
+      "retrieved": [
+        "rec-009",
+        "rec-001",
+        "rec-007"
+      ],
+      "kept": [
+        "rec-009"
+      ],
+      "scores": [
+        0.9319,
+        0.82,
+        0.8075
+      ],
+      "hit": true,
+      "refused": false,
+      "answer": "Here's how to handle it:\n\n1. Listen to the guest all the way through, without interrupting.\n2. Apologize sincerely for the oversight.\n3. Offer the guest a choice: an immediate replacement of the item, or an alternative dish.\n4. Notify the duty manager so the incident is recorded.",
+      "latency_ms": 3163.8
+    },
+    {
+      "id": "para-07",
+      "category": "paraphrased",
+      "query": "how much maize and beans for githeri",
+      "expected": "rec-015",
+      "retrieved": [
+        "rec-015",
+        "rec-012",
+        "rec-001"
+      ],
+      "kept": [
+        "rec-015"
+      ],
+      "scores": [
+        0.9534,
+        0.7969,
+        0.6852
+      ],
+      "hit": true,
+      "refused": false,
+      "answer": "Hey! Here are the quantities for Githeri:\n\nThe standard ratio for Githeri is 2 cups of maize to 3 cups of beans, keeping the beans slightly higher in quantity so the dish remains balanced and doesn't become too dry.",
+      "latency_ms": 2854.4
+    },
+    {
+      "id": "para-08",
+      "category": "paraphrased",
+      "query": "What do I need to check on the machines in the morning?",
+      "expected": "rec-004",
+      "retrieved": [
+        "rec-004",
+        "rec-003",
+        "rec-014"
+      ],
+      "kept": [
+        "rec-004",
+        "rec-003",
+        "rec-014"
+      ],
+      "scores": [
+        0.8739,
+        0.8465,
+        0.8292
+      ],
+      "hit": true,
+      "refused": false,
+      "answer": "Here's what to check on the machines in the morning:\n\n1. Power on the primary machinery: the microwave, the coffee machine, and the chillers.\n2. Check that every temperature display reads within its correct range: chillers between 1°C and 4°C, and the coffee machine boiler between 90°C and 96°C. If a display reads out of range, do not use that equipment and escalate to the duty manager immediately.\n3. Inspect the water lines for leaks.\n4. Confirm the microwave interiors and oven surfaces are clean.",
+      "latency_ms": 4513.8
+    },
+    {
+      "id": "para-09",
+      "category": "paraphrased",
+      "query": "How do I balance the till at the end of my shift?",
+      "expected": "rec-011",
+      "retrieved": [
+        "rec-011",
+        "rec-014",
+        "rec-003"
+      ],
+      "kept": [
+        "rec-011"
+      ],
+      "scores": [
+        0.9266,
+        0.8195,
+        0.8178
+      ],
+      "hit": true,
+      "refused": false,
+      "answer": "Here's how to balance the till at the end of your shift:\n\n1. Count the physical cash in the drawer and compare the total against the expected cash sales on the POS terminal's daily sales report.\n2. Reconcile the M-PESA paybill transaction log against the same POS daily sales report.\n3. If either check shows any variance at all, however small, notify the duty manager immediately.\n4. Secure the base float of KSh 5,000 in the safe.\n5. Submit the final shift report to the duty manager for sign-off.",
+      "latency_ms": 2080.9
+    },
+    {
+      "id": "para-10",
+      "category": "paraphrased",
+      "query": "Do we have soap and paper towels ready for hand washing?",
+      "expected": "rec-005",
+      "retrieved": [
+        "rec-005",
+        "rec-004",
+        "rec-003"
+      ],
+      "kept": [
+        "rec-005",
+        "rec-004",
+        "rec-003"
+      ],
+      "scores": [
+        0.8702,
+        0.8219,
+        0.8213
+      ],
+      "hit": true,
+      "refused": false,
+      "answer": "Hey there! Here's how to check the handwashing station setup:\n1. Stock the station with anti-bacterial liquid soap, and check the soap level is high enough to last service.\n2. Stock clean disposable paper towels.",
+      "latency_ms": 2559.1
+    },
+    {
+      "id": "para-11",
+      "category": "paraphrased",
+      "query": "What should I do with the raw fish before I go home?",
+      "expected": "rec-008",
+      "retrieved": [
+        "rec-008",
+        "rec-010",
+        "rec-014"
+      ],
+      "kept": [
+        "rec-008",
+        "rec-010",
+        "rec-014"
+      ],
+      "scores": [
+        0.7884,
+        0.7803,
+        0.7743
+      ],
+      "hit": true,
+      "refused": false,
+      "answer": "Here's how to close the kitchen:\n1. Turn off all heat sources, then close the gas cylinder valves.\n2. Transfer perishable items, such as raw fish and prepped stew bases, into airtight containers, label each container with the item name, date of prep, and expiry date, and store them in the chiller held at or below 4°C.\n3. Clean and sanitize all prep surfaces and cooktops using a food-grade chlorine-based sanitizer diluted to 50-100 ppm.\n4. Sweep the floors, then mop them.\n5. Empty every waste bin into the main dumpster.\n6. Have the kitchen manager review and sign off on the kitchen close.",
+      "latency_ms": 4277.7
+    },
+    {
+      "id": "para-12",
+      "category": "paraphrased",
+      "query": "Someone knocked over a drink in the dining area, what now?",
+      "expected": "rec-013",
+      "retrieved": [
+        "rec-013",
+        "rec-001",
+        "rec-008"
+      ],
+      "kept": [
+        "rec-013"
+      ],
+      "scores": [
+        0.89,
+        0.7746,
+        0.7744
+      ],
+      "hit": true,
+      "refused": false,
+      "answer": "Here's how to handle a spill on the dining floor during busy operational hours:\n1. Place a yellow 'Caution: Wet Floor' sign over the spill immediately.\n2. Wipe up all of the liquid using a dry mop or absorbent towels.\n3. Sanitize the surface using a food-grade chlorine-based sanitizer diluted to 50-100 ppm.\n4. Leave the sign in place until the floor is entirely dry, then remove it.",
+      "latency_ms": 3106.6
+    },
+    {
+      "id": "neg-01",
+      "category": "out_of_scope",
+      "query": "How do I change a car tire?",
+      "expected": null,
+      "retrieved": [
+        "rec-005",
+        "rec-014",
+        "rec-003"
+      ],
+      "kept": [
+        "rec-005",
+        "rec-014",
+        "rec-003"
+      ],
+      "scores": [
+        0.764,
+        0.7484,
+        0.7442
+      ],
+      "hit": null,
+      "refused": true,
+      "answer": "Information not found in the manual.",
+      "latency_ms": 2526.1
+    },
+    {
+      "id": "neg-02",
+      "category": "out_of_scope",
+      "query": "What is the capital city of Japan?",
+      "expected": null,
+      "retrieved": [
+        "rec-005",
+        "rec-000",
+        "rec-004"
+      ],
+      "kept": [],
+      "scores": [
+        0.7371,
+        0.7266,
+        0.725
+      ],
+      "hit": null,
+      "refused": true,
+      "answer": "Information not found in the manual.",
+      "latency_ms": 620.5
+    },
+    {
+      "id": "neg-03",
+      "category": "out_of_scope",
+      "query": "How much should we pay a new waiter per month?",
+      "expected": null,
+      "retrieved": [
+        "rec-000",
+        "rec-001",
+        "rec-013"
+      ],
+      "kept": [
+        "rec-000",
+        "rec-001",
+        "rec-013"
+      ],
+      "scores": [
+        0.7951,
+        0.7832,
+        0.7735
+      ],
+      "hit": null,
+      "refused": true,
+      "answer": "Information not found in the manual.",
+      "latency_ms": 3091.5
+    },
+    {
+      "id": "neg-04",
+      "category": "out_of_scope",
+      "query": "What is the recipe for chicken biryani?",
+      "expected": null,
+      "retrieved": [
+        "rec-012",
+        "rec-015",
+        "rec-010"
+      ],
+      "kept": [
+        "rec-012",
+        "rec-015",
+        "rec-010"
+      ],
+      "scores": [
+        0.7809,
+        0.7664,
+        0.7489
+      ],
+      "hit": null,
+      "refused": true,
+      "answer": "Information not found in the manual.",
+      "latency_ms": 1973.3
+    },
+    {
+      "id": "neg-05",
+      "category": "out_of_scope",
+      "query": "Can I swap my Saturday shift with someone else?",
+      "expected": null,
+      "retrieved": [
+        "rec-011",
+        "rec-010",
+        "rec-014"
+      ],
+      "kept": [
+        "rec-011",
+        "rec-010",
+        "rec-014"
+      ],
+      "scores": [
+        0.779,
+        0.7574,
+        0.7482
+      ],
+      "hit": null,
+      "refused": true,
+      "answer": "Information not found in the manual.",
+      "latency_ms": 5558.8
+    },
+    {
+      "id": "neg-06",
+      "category": "out_of_scope",
+      "query": "What is the wifi password for the restaurant?",
+      "expected": null,
+      "retrieved": [
+        "rec-000",
+        "rec-006",
+        "rec-009"
+      ],
+      "kept": [
+        "rec-000",
+        "rec-006",
+        "rec-009"
+      ],
+      "scores": [
+        0.7984,
+        0.7731,
+        0.764
+      ],
+      "hit": null,
+      "refused": true,
+      "answer": "Information not found in the manual.",
+      "latency_ms": 4520.1
+    }
+  ]
+}

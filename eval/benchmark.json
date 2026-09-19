@@ -1,0 +1,212 @@
+[
+  {
+    "id": "direct-01",
+    "category": "direct",
+    "query": "What is the standard procedure for greeting guests as they enter the restaurant?",
+    "expected_record_id": "rec-000",
+    "notes": "verbatim question"
+  },
+  {
+    "id": "direct-02",
+    "category": "direct",
+    "query": "How should a server handle taking food and beverage orders?",
+    "expected_record_id": "rec-001",
+    "notes": "verbatim question"
+  },
+  {
+    "id": "direct-03",
+    "category": "direct",
+    "query": "What is the standard opening routine and checklist before serving customers?",
+    "expected_record_id": "rec-003",
+    "notes": "verbatim question"
+  },
+  {
+    "id": "direct-04",
+    "category": "direct",
+    "query": "What is the mandatory procedure for setting up the handwashing station?",
+    "expected_record_id": "rec-005",
+    "notes": "verbatim question"
+  },
+  {
+    "id": "direct-05",
+    "category": "direct",
+    "query": "What steps must be followed when a customer informs staff of a severe food allergy?",
+    "expected_record_id": "rec-007",
+    "notes": "verbatim question, safety critical"
+  },
+  {
+    "id": "direct-06",
+    "category": "direct",
+    "query": "What is the standard procedure for closing the kitchen at the end of the day?",
+    "expected_record_id": "rec-008",
+    "notes": "verbatim question"
+  },
+  {
+    "id": "direct-07",
+    "category": "direct",
+    "query": "How should staff handle cash and closing register balancing at the end of a shift?",
+    "expected_record_id": "rec-011",
+    "notes": "verbatim question"
+  },
+  {
+    "id": "direct-08",
+    "category": "direct",
+    "query": "What is the recipe and preparation guide for Kenyan Beef Wet Fry?",
+    "expected_record_id": "rec-012",
+    "notes": "verbatim question"
+  },
+  {
+    "id": "direct-09",
+    "category": "direct",
+    "query": "What is the proper procedure for receiving and inspecting morning inventory deliveries?",
+    "expected_record_id": "rec-014",
+    "notes": "verbatim question"
+  },
+  {
+    "id": "direct-10",
+    "category": "direct",
+    "query": "What is the standard ratio of maize to beans required for preparing Githeri?",
+    "expected_record_id": "rec-015",
+    "notes": "verbatim question"
+  },
+  {
+    "id": "direct-11",
+    "category": "direct",
+    "query": "What are the best practices for presenting the bill and processing payment?",
+    "expected_record_id": "rec-002",
+    "notes": "verbatim question"
+  },
+  {
+    "id": "direct-12",
+    "category": "direct",
+    "query": "How should staff handle a spill on the dining floor during busy operational hours?",
+    "expected_record_id": "rec-013",
+    "notes": "verbatim question"
+  },
+  {
+    "id": "para-01",
+    "category": "paraphrased",
+    "query": "How do I prep the beef wet fry?",
+    "expected_record_id": "rec-012",
+    "notes": "informal phrasing of a recipe request"
+  },
+  {
+    "id": "para-02",
+    "category": "paraphrased",
+    "query": "what temperature should cold food be kept at?",
+    "expected_record_id": "rec-010",
+    "notes": "answer-body content; the known blind spot of question-only embedding"
+  },
+  {
+    "id": "para-03",
+    "category": "paraphrased",
+    "query": "A customer says they are allergic to peanuts. What do I do?",
+    "expected_record_id": "rec-007",
+    "notes": "scenario phrasing, safety critical"
+  },
+  {
+    "id": "para-04",
+    "category": "paraphrased",
+    "query": "What does Mr. Smith usually order?",
+    "expected_record_id": "rec-006",
+    "notes": "customer preference lookup by name"
+  },
+  {
+    "id": "para-05",
+    "category": "paraphrased",
+    "query": "What time do we open and what do I need to do first?",
+    "expected_record_id": "rec-003",
+    "notes": "two-part informal question; opening time lives in the answer body"
+  },
+  {
+    "id": "para-06",
+    "category": "paraphrased",
+    "query": "Someone is unhappy their food came out cold. How should I handle it?",
+    "expected_record_id": "rec-009",
+    "notes": "scenario phrasing of a complaint"
+  },
+  {
+    "id": "para-07",
+    "category": "paraphrased",
+    "query": "how much maize and beans for githeri",
+    "expected_record_id": "rec-015",
+    "notes": "lowercase, no punctuation, telegraphic"
+  },
+  {
+    "id": "para-08",
+    "category": "paraphrased",
+    "query": "What do I need to check on the machines in the morning?",
+    "expected_record_id": "rec-004",
+    "notes": "informal wording for equipment inspection"
+  },
+  {
+    "id": "para-09",
+    "category": "paraphrased",
+    "query": "How do I balance the till at the end of my shift?",
+    "expected_record_id": "rec-011",
+    "notes": "'till' never appears in the manual; 'register' does"
+  },
+  {
+    "id": "para-10",
+    "category": "paraphrased",
+    "query": "Do we have soap and paper towels ready for hand washing?",
+    "expected_record_id": "rec-005",
+    "notes": "asks about the contents of the answer rather than the procedure"
+  },
+  {
+    "id": "para-11",
+    "category": "paraphrased",
+    "query": "What should I do with the raw fish before I go home?",
+    "expected_record_id": "rec-008",
+    "notes": "detail from the closing answer body"
+  },
+  {
+    "id": "para-12",
+    "category": "paraphrased",
+    "query": "Someone knocked over a drink in the dining area, what now?",
+    "expected_record_id": "rec-013",
+    "notes": "scenario phrasing of the spill procedure"
+  },
+  {
+    "id": "neg-01",
+    "category": "out_of_scope",
+    "query": "How do I change a car tire?",
+    "expected_record_id": null,
+    "notes": "clearly outside the domain"
+  },
+  {
+    "id": "neg-02",
+    "category": "out_of_scope",
+    "query": "What is the capital city of Japan?",
+    "expected_record_id": null,
+    "notes": "general knowledge the LLM knows but the manual does not contain"
+  },
+  {
+    "id": "neg-03",
+    "category": "out_of_scope",
+    "query": "How much should we pay a new waiter per month?",
+    "expected_record_id": null,
+    "notes": "plausible restaurant question, not documented; must not be invented"
+  },
+  {
+    "id": "neg-04",
+    "category": "out_of_scope",
+    "query": "What is the recipe for chicken biryani?",
+    "expected_record_id": null,
+    "notes": "recipe shape, but not in this knowledge base"
+  },
+  {
+    "id": "neg-05",
+    "category": "out_of_scope",
+    "query": "Can I swap my Saturday shift with someone else?",
+    "expected_record_id": null,
+    "notes": "managerial decision, explicitly out of scope in the proposal"
+  },
+  {
+    "id": "neg-06",
+    "category": "out_of_scope",
+    "query": "What is the wifi password for the restaurant?",
+    "expected_record_id": null,
+    "notes": "restaurant-adjacent but absent from the manual"
+  }
+]

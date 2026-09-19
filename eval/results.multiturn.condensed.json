@@ -1,0 +1,456 @@
+{
+  "summary": {
+    "embedding_strategy": "question_only",
+    "llm_model": "gemini-3.5-flash-lite",
+    "floor_mode": "relative",
+    "min_relevance": 0.75,
+    "counts": {
+      "follow_up": 10,
+      "out_of_scope": 5
+    },
+    "follow_up_resolved": 10,
+    "follow_up_rate": 1.0,
+    "refusal_rate": 1.0,
+    "unresolved": [],
+    "leaked": [],
+    "latency_ms": {
+      "mean": 7204.9,
+      "median": 6333.0,
+      "max": 11244.6
+    },
+    "condense": true
+  },
+  "cases": [
+    {
+      "id": "follow-01",
+      "category": "follow_up",
+      "setup": [
+        "What is the proper procedure for receiving and inspecting morning inventory deliveries?"
+      ],
+      "query": "what about for fish?",
+      "searched_for": "What is the proper procedure for receiving and inspecting fish deliveries?",
+      "expected": "rec-014",
+      "retrieved": [
+        "rec-014",
+        "rec-000",
+        "rec-010"
+      ],
+      "kept": [
+        "rec-014",
+        "rec-000",
+        "rec-010"
+      ],
+      "scores": [
+        0.9077,
+        0.8178,
+        0.8109
+      ],
+      "refused": false,
+      "passed": true,
+      "answer": "Here's how to receive and inspect fish deliveries:\n\n1. Count the delivered quantities, such as maize flour bags, fresh fish, meat cuts, and vegetables, against the delivery invoice.\n2. Inspect the fresh produce and meat for freshness, and check that the meat and fish arrived at 4°C or below. If an item fails inspection, note the rejection clearly on the invoice and do not accept the item.\n3. Check that all outer packaging is undamaged.\n4. Move the cold items into the refrigerator or freezer immediately.\n5. Log the delivery.",
+      "latency_ms": 8566.5
+    },
+    {
+      "id": "follow-02",
+      "category": "follow_up",
+      "setup": [
+        "How do I close the kitchen at night?"
+      ],
+      "query": "what goes on the label?",
+      "searched_for": "What goes on the label for closing the kitchen?",
+      "expected": "rec-008",
+      "retrieved": [
+        "rec-008",
+        "rec-005",
+        "rec-011"
+      ],
+      "kept": [
+        "rec-008",
+        "rec-005",
+        "rec-011"
+      ],
+      "scores": [
+        0.8695,
+        0.7842,
+        0.7819
+      ],
+      "refused": false,
+      "passed": true,
+      "answer": "Here is what goes on the label:\n- Item name\n- Date of prep\n- Expiry date",
+      "latency_ms": 6020.0
+    },
+    {
+      "id": "follow-03",
+      "category": "follow_up",
+      "setup": [
+        "What is the recipe and preparation guide for Kenyan Beef Wet Fry?"
+      ],
+      "query": "how long do I boil it?",
+      "searched_for": "How long do I boil the Kenyan Beef Wet Fry?",
+      "expected": "rec-012",
+      "retrieved": [
+        "rec-012",
+        "rec-015",
+        "rec-008"
+      ],
+      "kept": [
+        "rec-012"
+      ],
+      "scores": [
+        0.9408,
+        0.8102,
+        0.6925
+      ],
+      "refused": false,
+      "passed": true,
+      "answer": "You boil the beef for 40 to 45 minutes, until tender.",
+      "latency_ms": 6226.6
+    },
+    {
+      "id": "follow-04",
+      "category": "follow_up",
+      "setup": [
+        "What are the specific dietary restrictions and preferences for regular customer Mr. Smith?"
+      ],
+      "query": "can I use the sunflower oil for him?",
+      "searched_for": "Can I use the sunflower oil for Mr. Smith?",
+      "expected": "rec-006",
+      "retrieved": [
+        "rec-006",
+        "rec-005",
+        "rec-007"
+      ],
+      "kept": [
+        "rec-006",
+        "rec-005",
+        "rec-007"
+      ],
+      "scores": [
+        0.8186,
+        0.7434,
+        0.7432
+      ],
+      "refused": false,
+      "passed": true,
+      "answer": "Yes, you can! The kitchen's default sunflower oil is a vegetable oil and is acceptable for his order.",
+      "latency_ms": 8253.6
+    },
+    {
+      "id": "follow-05",
+      "category": "follow_up",
+      "setup": [
+        "How do I balance the till at the end of my shift?"
+      ],
+      "query": "what if it doesn't match?",
+      "searched_for": "What do I do if the till doesn't match?",
+      "expected": "rec-011",
+      "retrieved": [
+        "rec-011",
+        "rec-014",
+        "rec-003"
+      ],
+      "kept": [
+        "rec-011",
+        "rec-014",
+        "rec-003"
+      ],
+      "scores": [
+        0.876,
+        0.8172,
+        0.8019
+      ],
+      "refused": false,
+      "passed": true,
+      "answer": "Here's what to do:\n1. Count the physical cash in the drawer and compare the total against the expected cash sales on the POS terminal's daily sales report.\n2. Reconcile the M-PESA paybill transaction log against the same POS daily sales report.\n3. If either check shows any variance at all, however small, notify the duty manager immediately.\n4. Secure the base float of KSh 5,000 in the safe.\n5. Submit the final shift report to the duty manager for sign-off.",
+      "latency_ms": 5615.9
+    },
+    {
+      "id": "follow-06",
+      "category": "follow_up",
+      "setup": [
+        "What steps must be followed when a customer informs staff of a severe food allergy?"
+      ],
+      "query": "who do I tell if he's not around?",
+      "searched_for": "Who do I tell if the kitchen manager is not around?",
+      "expected": "rec-007",
+      "retrieved": [
+        "rec-008",
+        "rec-009",
+        "rec-007"
+      ],
+      "kept": [
+        "rec-008",
+        "rec-009",
+        "rec-007"
+      ],
+      "scores": [
+        0.8177,
+        0.8099,
+        0.8018
+      ],
+      "refused": false,
+      "passed": true,
+      "answer": "If the kitchen manager is unreachable, contact the general manager.",
+      "latency_ms": 9373.4
+    },
+    {
+      "id": "follow-07",
+      "category": "follow_up",
+      "setup": [
+        "How should staff perform the daily equipment inspection during morning setup?"
+      ],
+      "query": "and what if one of them is out of range?",
+      "searched_for": "What if one of the primary machinery, such as the microwave or coffee machine, is out of range during the daily equipment inspection in morning setup?",
+      "expected": "rec-004",
+      "retrieved": [
+        "rec-004",
+        "rec-014",
+        "rec-003"
+      ],
+      "kept": [
+        "rec-004",
+        "rec-014",
+        "rec-003"
+      ],
+      "scores": [
+        0.8911,
+        0.836,
+        0.8277
+      ],
+      "refused": false,
+      "passed": true,
+      "answer": "Here's what to do if equipment is out of range during the inspection:\n1. Do not use that equipment.\n2. Escalate to the duty manager immediately.",
+      "latency_ms": 9570.8
+    },
+    {
+      "id": "follow-08",
+      "category": "follow_up",
+      "setup": [
+        "How should staff handle a spill on the dining floor during busy operational hours?"
+      ],
+      "query": "what should I clean it with?",
+      "searched_for": "What should I clean a spill on the dining floor with during busy operational hours?",
+      "expected": "rec-013",
+      "retrieved": [
+        "rec-013",
+        "rec-010",
+        "rec-000"
+      ],
+      "kept": [
+        "rec-013"
+      ],
+      "scores": [
+        0.9634,
+        0.8178,
+        0.8169
+      ],
+      "refused": false,
+      "passed": true,
+      "answer": "Here are the items to use for wiping up the spill:\n1. Use a dry mop or absorbent towels to wipe up all of the liquid.\n2. Use a food-grade chlorine-based sanitizer diluted to 50-100 ppm to sanitize the surface.",
+      "latency_ms": 4413.4
+    },
+    {
+      "id": "follow-09",
+      "category": "follow_up",
+      "setup": [
+        "What is the recipe and preparation guide for Kenyan Beef Wet Fry?",
+        "how long do I boil it?"
+      ],
+      "query": "and what is the maize to beans ratio for githeri?",
+      "searched_for": "what is the maize to beans ratio for githeri?",
+      "expected": "rec-015",
+      "retrieved": [
+        "rec-015",
+        "rec-012",
+        "rec-010"
+      ],
+      "kept": [
+        "rec-015"
+      ],
+      "scores": [
+        0.9815,
+        0.8168,
+        0.7124
+      ],
+      "refused": false,
+      "passed": true,
+      "answer": "The standard ratio for Githeri is 2 cups of maize to 3 cups of beans, keeping the beans slightly higher in quantity so the dish remains balanced and doesn't become too dry.",
+      "latency_ms": 4146.7
+    },
+    {
+      "id": "follow-10",
+      "category": "follow_up",
+      "setup": [
+        "What is the standard opening routine and checklist before serving customers?",
+        "what time do we open?"
+      ],
+      "query": "so what time should I get here?",
+      "searched_for": "What time should I get here to open the restaurant?",
+      "expected": "rec-003",
+      "retrieved": [
+        "rec-003",
+        "rec-000",
+        "rec-014"
+      ],
+      "kept": [
+        "rec-003",
+        "rec-000",
+        "rec-014"
+      ],
+      "scores": [
+        0.8458,
+        0.8216,
+        0.8181
+      ],
+      "refused": false,
+      "passed": true,
+      "answer": "The restaurant opens at 7:00 AM, so staff arrive by 6:30 AM.",
+      "latency_ms": 5880.6
+    },
+    {
+      "id": "negfollow-01",
+      "category": "out_of_scope_follow_up",
+      "setup": [
+        "How do I close the kitchen at night?"
+      ],
+      "query": "and what's the wifi password?",
+      "searched_for": "What is the wifi password?",
+      "expected": null,
+      "retrieved": [
+        "rec-000",
+        "rec-005",
+        "rec-003"
+      ],
+      "kept": [
+        "rec-000",
+        "rec-005",
+        "rec-003"
+      ],
+      "scores": [
+        0.7728,
+        0.7567,
+        0.753
+      ],
+      "refused": true,
+      "passed": true,
+      "answer": "Information not found in the manual.",
+      "latency_ms": 10329.0
+    },
+    {
+      "id": "negfollow-02",
+      "category": "out_of_scope_follow_up",
+      "setup": [
+        "How do I balance the till at the end of my shift?"
+      ],
+      "query": "how much should we pay a new waiter?",
+      "searched_for": "how much should we pay a new waiter?",
+      "expected": null,
+      "retrieved": [
+        "rec-000",
+        "rec-001",
+        "rec-011"
+      ],
+      "kept": [
+        "rec-000",
+        "rec-001",
+        "rec-011"
+      ],
+      "scores": [
+        0.7949,
+        0.788,
+        0.7651
+      ],
+      "refused": true,
+      "passed": true,
+      "answer": "Information not found in the manual.",
+      "latency_ms": 6333.0
+    },
+    {
+      "id": "negfollow-03",
+      "category": "out_of_scope_follow_up",
+      "setup": [
+        "What is the recipe and preparation guide for Kenyan Beef Wet Fry?"
+      ],
+      "query": "what about chicken biryani?",
+      "searched_for": "What is the recipe and preparation guide for chicken biryani?",
+      "expected": null,
+      "retrieved": [
+        "rec-012",
+        "rec-015",
+        "rec-010"
+      ],
+      "kept": [
+        "rec-012",
+        "rec-015",
+        "rec-010"
+      ],
+      "scores": [
+        0.8143,
+        0.7848,
+        0.7689
+      ],
+      "refused": true,
+      "passed": true,
+      "answer": "Information not found in the manual.",
+      "latency_ms": 7529.6
+    },
+    {
+      "id": "negfollow-04",
+      "category": "out_of_scope_follow_up",
+      "setup": [
+        "What are the key daily food safety and hygiene guidelines staff must follow during shifts?"
+      ],
+      "query": "can I swap my Saturday shift with someone?",
+      "searched_for": "Can I swap my Saturday shift with someone?",
+      "expected": null,
+      "retrieved": [
+        "rec-011",
+        "rec-010",
+        "rec-014"
+      ],
+      "kept": [
+        "rec-011",
+        "rec-010",
+        "rec-014"
+      ],
+      "scores": [
+        0.7766,
+        0.7551,
+        0.7495
+      ],
+      "refused": true,
+      "passed": true,
+      "answer": "Information not found in the manual.",
+      "latency_ms": 4570.4
+    },
+    {
+      "id": "negfollow-05",
+      "category": "out_of_scope_follow_up",
+      "setup": [
+        "What steps must be followed when a customer informs staff of a severe food allergy?"
+      ],
+      "query": "what should I do if someone has an asthma attack?",
+      "searched_for": "what should I do if someone has an asthma attack?",
+      "expected": null,
+      "retrieved": [
+        "rec-007",
+        "rec-005",
+        "rec-000"
+      ],
+      "kept": [
+        "rec-007",
+        "rec-005",
+        "rec-000"
+      ],
+      "scores": [
+        0.7867,
+        0.7587,
+        0.7457
+      ],
+      "refused": true,
+      "passed": true,
+      "answer": "Information not found in the manual.",
+      "latency_ms": 11244.6
+    }
+  ]
+}
