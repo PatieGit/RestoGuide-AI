@@ -1,0 +1,67 @@
+[
+  {
+    "question": "What is the standard procedure for greeting guests as they enter the restaurant?",
+    "answer": "1. Greet the guest warmly within 30 seconds of their arrival.\n2. Ask whether they have a reservation.\n3. Escort them promptly to a table that is clean and fully set."
+  },
+  {
+    "question": "How should a server handle taking food and beverage orders?",
+    "answer": "1. Introduce yourself to the table.\n2. Highlight the daily specials.\n3. Write the order down as it is given, noting any dietary restrictions alongside the item they apply to.\n4. Repeat the complete order back to the guests and confirm it before leaving the table."
+  },
+  {
+    "question": "What are the best practices for presenting the bill and processing payment?",
+    "answer": "1. Bring the bill in a clean folio as soon as the guest asks for it.\n2. Place the folio at the right edge of the table.\n3. Process the payment promptly.\n4. Thank the guests and invite them back."
+  },
+  {
+    "question": "What is the standard opening routine and checklist before serving customers?",
+    "answer": "The restaurant opens at 7:00 AM, so staff arrive by 6:30 AM.\n1. Unlock the doors.\n2. Turn on the main lighting.\n3. Wipe down all tables and chairs.\n4. Confirm every POS terminal is online.\n5. Confirm the mandatory equipment is working: microwave, refrigerator, and espresso machine.\n6. Confirm the essential daily ingredients are fully stocked: cooking oil, fresh dairy, and the signature house sauce base."
+  },
+  {
+    "question": "How should staff perform the daily equipment inspection during morning setup?",
+    "category": "safety",
+    "answer": "Complete all four checks before prep begins.\n1. Power on the primary machinery: the microwave, the coffee machine, and the chillers.\n2. Check that every temperature display reads within its correct range: chillers between 1°C and 4°C, and the coffee machine boiler between 90°C and 96°C. If a display reads out of range, do not use that equipment and escalate to the duty manager immediately.\n3. Inspect the water lines for leaks.\n4. Confirm the microwave interiors and oven surfaces are clean."
+  },
+  {
+    "question": "What is the mandatory procedure for setting up the handwashing station?",
+    "answer": "Complete this before service starts.\n1. Stock the station with anti-bacterial liquid soap, and check the soap level is high enough to last service.\n2. Stock clean disposable paper towels.\n3. Run the tap and confirm it works with a steady flow of water.\n4. Confirm a dedicated pedal-operated trash bin is in place at the station."
+  },
+  {
+    "question": "What are the specific dietary restrictions and preferences for regular customer Mr. Smith?",
+    "answer": "Mr. Smith is a regular customer with a severe peanut allergy. He prefers his beef wet fry prepared using a completely clean pan with vegetable oil only, and always requests no milk for his tea or coffee. The kitchen's default sunflower oil is a vegetable oil and is acceptable for his order."
+  },
+  {
+    "question": "What steps must be followed when a customer informs staff of a severe food allergy?",
+    "answer": "1. Tell the kitchen manager immediately, before the order is started. If the kitchen manager is unreachable, contact the general manager.\n2. Clean and sanitize every food prep surface and utensil that will be used for the order, using a food-grade chlorine-based sanitizer diluted to 50-100 ppm.\n3. Read the ingredient label on every item going into the dish and check it against the allergy the customer stated.\n4. Mark the final ticket clearly with an 'ALLERGY WARNING' label."
+  },
+  {
+    "question": "What is the standard procedure for closing the kitchen at the end of the day?",
+    "answer": "1. Turn off all heat sources, then close the gas cylinder valves.\n2. Transfer perishable items, such as raw fish and prepped stew bases, into airtight containers, label each container with the item name, date of prep, and expiry date, and store them in the chiller held at or below 4°C.\n3. Clean and sanitize all prep surfaces and cooktops using a food-grade chlorine-based sanitizer diluted to 50-100 ppm.\n4. Sweep the floors, then mop them.\n5. Empty every waste bin into the main dumpster.\n6. Have the kitchen manager review and sign off on the kitchen close."
+  },
+  {
+    "question": "How should staff handle a customer complaint regarding cold food or an incorrect order?",
+    "answer": "1. Listen to the guest all the way through, without interrupting.\n2. Apologize sincerely for the oversight.\n3. Offer the guest a choice: an immediate replacement of the item, or an alternative dish.\n4. Notify the duty manager so the incident is recorded."
+  },
+  {
+    "question": "What are the key daily food safety and hygiene guidelines staff must follow during shifts?",
+    "answer": "These apply throughout every shift.\n1. Wash your hands for at least 20 seconds, and repeat frequently through the shift.\n2. Wear a clean apron and a hair restraint in all prep areas.\n3. Keep hot food above 60°C and cold food below 4°C.\n4. Use the designated colour-coded cutting boards: the red board for raw meats and the green board for vegetables, so the two never touch the same surface."
+  },
+  {
+    "question": "How should staff handle cash and closing register balancing at the end of a shift?",
+    "answer": "1. Count the physical cash in the drawer and compare the total against the expected cash sales on the POS terminal's daily sales report.\n2. Reconcile the M-PESA paybill transaction log against the same POS daily sales report.\n3. If either check shows any variance at all, however small, notify the duty manager immediately.\n4. Secure the base float of KSh 5,000 in the safe.\n5. Submit the final shift report to the duty manager for sign-off."
+  },
+  {
+    "question": "What is the recipe and preparation guide for Kenyan Beef Wet Fry?",
+    "answer": "Yield: 4 portions. Ingredients: 500g cubed beef, 3 tbsp sunflower oil (the default cooking oil), 2 chopped onions, 3 minced garlic cloves, 3 diced tomatoes, 1 tbsp tomato paste, 1 tsp salt, and fresh dhania (cilantro).\n1. Boil the 500g of cubed beef for 40 to 45 minutes, until tender.\n2. In a separate pan, sauté the chopped onions and garlic in the sunflower oil until golden.\n3. Add the diced tomatoes, tomato paste, and salt, and cook until a thick gravy forms.\n4. Add the boiled beef to the pan and stir well until it is fully coated in the thick sauce.\n5. Simmer for 8 to 10 minutes.\n6. Garnish with fresh dhania and serve with ugali or rice."
+  },
+  {
+    "question": "How should staff handle a spill on the dining floor during busy operational hours?",
+    "answer": "1. Place a yellow 'Caution: Wet Floor' sign over the spill immediately.\n2. Wipe up all of the liquid using a dry mop or absorbent towels.\n3. Sanitize the surface using a food-grade chlorine-based sanitizer diluted to 50-100 ppm.\n4. Leave the sign in place until the floor is entirely dry, then remove it."
+  },
+  {
+    "question": "What is the proper procedure for receiving and inspecting morning inventory deliveries?",
+    "answer": "1. Count the delivered quantities, such as maize flour bags, fresh fish, meat cuts, and vegetables, against the delivery invoice.\n2. Inspect the fresh produce and meat for freshness, and check that the meat and fish arrived at 4°C or below. If an item fails inspection, note the rejection clearly on the invoice and do not accept the item.\n3. Check that all outer packaging is undamaged.\n4. Move the cold items into the refrigerator or freezer immediately.\n5. Log the delivery."
+  },
+  {
+    "question": "What is the standard ratio of maize to beans required for preparing Githeri?",
+    "answer": "The standard ratio for Githeri is 2 cups of maize to 3 cups of beans, keeping the beans slightly higher in quantity so the dish remains balanced and doesn't become too dry."
+  }
+]
