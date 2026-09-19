@@ -1,0 +1,14 @@
+# Pins are resolved-and-verified; see requirements.lock.txt for the full freeze.
+# langchain-core must be >=0.3.76 (required by langchain-chroma 0.2.6).
+# langchain-community is deliberately NOT included: nothing in either pipeline
+# uses it, and it pulls in aiohttp/SQLAlchemy/dataclasses-json for nothing.
+
+langchain==0.3.27
+langchain-core>=0.3.76,<0.4
+langchain-google-genai==2.1.12
+langchain-chroma==0.2.6
+chromadb==1.0.20
+google-genai==1.33.0
+streamlit==1.49.1
+python-dotenv==1.1.1
+pytest==8.4.2
